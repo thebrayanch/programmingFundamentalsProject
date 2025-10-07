@@ -1,0 +1,9 @@
+1. Lo aprendido:
+Durante el desarrollo de este proyecto se aprendió a crear, generar y manejar archivos de text en Java, el manejo de excepciones y la organización haciendo uso de las buenas preacticas de programación.
+
+2. Posibles aplicaciones:
+Ya que Java sigue siendo uno de los lenguajes más demandados por las empresas el conocimineto de manejo de archivos, procesamiento de datos, se hace necesario aprender este tipo de herramientas para automatizar el analisis de información.
+
+3. Dificultades:
+Una de las principales dificultades fue comprender y organizar la lectura y procesamiento de varios archivos de entrada, además de asegurar que el programa pudiera manejar errores de formato sin detenerse. 
+Finalmente, integrar la funcionalidad de procesamiento de múltiples archivos por vendedor exigió pensar de manera modular y estructurada.

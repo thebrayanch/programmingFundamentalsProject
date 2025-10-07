@@ -42,6 +42,7 @@ public class GenerateInfoFiles {
             int sellerCount = 10;
             int productCount = 15;
             int salesPerSeller = 30;
+            int filesPerPerson = 3; //Each seller has 3 files
 
             // Create sales folder if it does not exist
             File salesFolder = new File("sales");
@@ -60,7 +61,9 @@ public class GenerateInfoFiles {
 
             // Generate sales files for each seller
             for (Seller s : sellers) {
-                createSalesMenFile(salesPerSeller, s, productCount, salesFolder);
+                for (int i=1; i<=filesPerPerson; i++) {
+                    createSalesMenFile(salesPerSeller, s, productCount, salesFolder, i);
+                }
             }
 
             System.out.println("Files generated successfully.");
@@ -119,9 +122,9 @@ public class GenerateInfoFiles {
    // @param salesFolder Folder where sales files will be saved
    // @throws IOException If file writing fails
     
-    public static void createSalesMenFile(int salesCount, Seller seller, int productCount, File salesFolder) throws IOException {
+    public static void createSalesMenFile(int salesCount, Seller seller, int productCount, File salesFolder, int fileNumber) throws IOException {
         Random random = new Random();
-        String filename = salesFolder.getPath() + "/sales_" + seller.id + ".txt";
+        String filename = salesFolder.getPath() + "/sales_" + seller.id + "_" + fileNumber + ".txt";
 
         try (FileWriter writer = new FileWriter(filename)) {
             writer.write(seller.docType + ";" + seller.id + "\n");
